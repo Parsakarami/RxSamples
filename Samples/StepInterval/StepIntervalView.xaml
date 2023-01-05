@@ -1,11 +1,10 @@
-﻿<Window x:Class="RxSamples.MainWindow"
+﻿<Window x:Class="RxSamples.Samples.StepInterval.StepIntervalView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RxSamples"
         mc:Ignorable="d"
-        Title="MainWindow" Height="379" Width="314">
+        Title="StepInterval" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -16,12 +15,16 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Content="StepInterval" Margin="3" Click="Button_Click"></Button>
+        <Label 
+            x:Name="ValueLabel" 
+            Grid.Column="1" 
+            Grid.Row="1" 
+            FontSize="15" 
+            Content="0" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
