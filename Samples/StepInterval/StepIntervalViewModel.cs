@@ -15,20 +15,6 @@ namespace RxSamples.Samples.StepInterval
     {
         public ViewModelActivator Activator { get; set; } = new ViewModelActivator();
         public Subject<int> NotificationChannel { get; set; } = new Subject<int>();
-        private int count;
-        public StepIntervalViewModel()
-        {
-            this.WhenActivated(disposable =>
-            {
-                Observable
-                .Interval(TimeSpan.FromMilliseconds(100))
-                .Subscribe(_ =>
-                {
-                    count++;
-                    NotificationChannel.OnNext(count);
-                }).DisposeWith(disposable);
-            });
-        }
     }
 
     public static class RxExtentionsMethods

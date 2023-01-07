@@ -16,16 +16,15 @@ namespace RxSamples.Samples.StepInterval
             ViewModel = new StepIntervalViewModel();
             this.WhenActivated(disposable =>
             {
-                ViewModel.NotificationChannel
+                Observable.Range(1, 10)
                 .Buffer(3)
                 .StepInterval(TimeSpan.FromSeconds(1))
-                .Take(3)
                 .ObserveOn(RxApp.MainThreadScheduler)
                 .Subscribe(batches =>
                 {
                     var values = string.Join(", ", batches);
-                    var receiveTime = DateTime.Now.TimeOfDay;
-                    ValueLabel.Content += $"Values: [{values}]  -  Receive time: {receiveTime} {Environment.NewLine}";
+                    var receiveTime = DateTime.Now.ToString("hh:mm:ss");
+                    ValueLabel.Content += $"[{values}]  -  Receive time: {receiveTime} {Environment.NewLine}";
                 }).DisposeWith(disposable);
             });
         }
