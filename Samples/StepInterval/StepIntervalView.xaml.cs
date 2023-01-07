@@ -1,6 +1,10 @@
 ﻿using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 using System.Reactive.Disposables;
+using System.Reactive.Linq;
 using System.Windows;
+using System.Linq;
+using System;
 
 namespace RxSamples.Samples.StepInterval
 {
@@ -12,10 +16,17 @@ namespace RxSamples.Samples.StepInterval
             ViewModel = new StepIntervalViewModel();
             this.WhenActivated(disposable =>
             {
-                this.Bind(ViewModel,
-                    vm => vm.Count,
-                    v => v.ValueLabel.Content)
-                .DisposeWith(disposable);
+                ViewModel.NotificationChannel
+                .Buffer(3)
+                .StepInterval(TimeSpan.FromSeconds(1))
+                .Take(3)
+                .ObserveOn(RxApp.MainThreadScheduler)
+                .Subscribe(batches =>
+                {
+                    var values = string.Join(", ", batches);
+                    var receiveTime = DateTime.Now.TimeOfDay;
+                    ValueLabel.Content += $"Values: [{values}]  -  Receive time: {receiveTime} {Environment.NewLine}";
+                }).DisposeWith(disposable);
             });
         }
 

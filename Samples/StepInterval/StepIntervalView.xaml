@@ -10,6 +10,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -19,12 +20,12 @@
         <Label 
             x:Name="ValueLabel" 
             Grid.Column="1" 
+            Grid.ColumnSpan="2" 
             Grid.Row="1" 
-            FontSize="15" 
-            Content="0" 
+            FontSize="18"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch" 
-            HorizontalContentAlignment="Center" 
-            VerticalContentAlignment="Center"/>
+            HorizontalContentAlignment="Stretch" 
+            VerticalContentAlignment="Stretch"/>
     </Grid>
 </Window>
