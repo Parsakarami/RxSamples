@@ -16,3 +16,8 @@ In all the samples, we widely use Observables. If you are not familiar with the 
 https://learn.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern <br/>
 https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1?view=net-7.0 <br/>
 https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0 <br/>
+
+## Marble Diagram
+
+The best way to show the execution pipeline of the observables sequence is using marble diagrams. Hence, I use it in this repo and my blog as well. In the following figure, execution of the observables sequence is represented by a marble diagram.
+<img src="Marble Diagrams/MarbleDiagram - Explanation.jpg" width="550">
