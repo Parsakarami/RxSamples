@@ -22,21 +22,17 @@ https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifyproper
 The best way to show the execution pipeline of the observables sequence is using marble diagrams. Hence, I use it in this repo and my blog as well. In the following figure, execution of the observables sequence is represented by a marble diagram.
 <br/>
 <img src="Marble Diagrams/MarbleDiagram - Explanation.jpg" width="85%">
-<br/>
 
 ## Rx Operations
 The following examples show some of the main Rx operations using a marble diagram. 
 ### Take
-The <i>Take(Count)</i> operation is used to take a specific number of elements from an observable sequence.
+The <b><i>Take(int count)</i></b> operation is used to take a specific number of elements from an observable sequence.
 <br/>
 <img src="Marble Diagrams/MarbleDiagram - Take.jpg" width="60%">
-<br/>
 ### Delay
-The <i>Delay(TimeSpan)</i> operation is used to receive the values of an observable sequence by delay after the subscription.
+The <b><i>Delay(TimeSpan dueTime)</i></b> operation is used to receive the values of an observable sequence by delay after the subscription.
 <br/>
 <img src="Marble Diagrams/MarbleDiagram - Delay.jpg" width="60%">
-<br/>
 ### Where
-The <i>Where(Func<TSource, bool> predicate)</i> operation is used to filter out the values of an observable sequence.
-<br/>
+The <b><i>Where(Func<TSource, bool> predicate)</i></b> operation is used to filter out the values of an observable sequence.
 <img src="Marble Diagrams/MarbleDiagram - Where.jpg" width="60%">
