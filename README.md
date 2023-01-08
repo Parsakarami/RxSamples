@@ -13,6 +13,6 @@ https://github.com/reactiveui/reactiveui
 ## Observables
 In all the samples, we widely use Observables. If you are not familiar with the observer design pattern, visit the following links: 
 
-https://learn.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern
-https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1?view=net-7.0
-https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0
+https://learn.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern <br/>
+https://learn.microsoft.com/en-us/dotnet/api/system.iobservable-1?view=net-7.0 <br/>
+https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0 <br/>
