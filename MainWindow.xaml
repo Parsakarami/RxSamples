@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RxSamples"
         mc:Ignorable="d"
-        Title="MainWindow" Height="379" Width="314">
+        Title="Rx.NET Sample" Height="379" Width="314">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -22,6 +22,10 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Content="StepInterval" Margin="3" Click="Button_Click"></Button>
+        <Button 
+            Grid.Row="1"
+            Content="StepInterval"
+            Margin="5"
+            Click="Button_Click"></Button>
     </Grid>
 </Window>
