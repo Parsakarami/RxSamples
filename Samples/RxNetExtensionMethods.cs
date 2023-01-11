@@ -1,22 +1,13 @@
-﻿using ReactiveUI;
-using ReactiveUI.Fody.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Reactive.Subjects;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RxSamples.Samples.StepInterval
+namespace RxSamples.Samples
 {
-    public class StepIntervalViewModel : ReactiveObject, IActivatableViewModel
-    {
-        public ViewModelActivator Activator { get; set; } = new ViewModelActivator();
-    }
-
-    public static class RxExtentionsMethods
+    public static class RxNetExtensionMethods
     {
         public static IObservable<T> StepInterval<T>(this IObservable<T> source, TimeSpan minDelay)
         {
