@@ -14,7 +14,7 @@ namespace RxSamples.Samples.StepInterval
             ViewModel = new StepIntervalViewModel();
             this.WhenActivated(disposable =>
             {
-                Observable.Range(1, 10)
+                Observable.Range(1, 9)
                 .Buffer(3)
                 .StepInterval(TimeSpan.FromSeconds(1))
                 .ObserveOn(RxApp.MainThreadScheduler)

@@ -11,20 +11,7 @@ using System.Threading.Tasks;
 
 namespace RxSamples.Samples.StepInterval
 {
-    public class StepIntervalViewModel : ReactiveObject, IActivatableViewModel
+    public class StepIntervalViewModel : BaseViewModel
     {
-        public ViewModelActivator Activator { get; set; } = new ViewModelActivator();
-    }
-
-    public static class RxExtentionsMethods
-    {
-        public static IObservable<T> StepInterval<T>(this IObservable<T> source, TimeSpan minDelay)
-        {
-            return source.Select(x =>
-                Observable.Empty<T>()
-                    .Delay(minDelay)
-                    .StartWith(x)
-            ).Concat();
-        }
     }
 }

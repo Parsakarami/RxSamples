@@ -12,6 +12,7 @@ namespace RxSamples
             ViewModel = new MainViewModel();
             this.WhenActivated(disposable =>
             {
+                
             });
         }
 

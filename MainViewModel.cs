@@ -1,9 +1,9 @@
 ﻿using ReactiveUI;
+using System.Reactive.Disposables;
 
 namespace RxSamples
 {
-    public class MainViewModel : ReactiveObject, IActivatableViewModel
+    public class MainViewModel : BaseViewModel
     {
-        public ViewModelActivator Activator { get; set; } = new ViewModelActivator();
     }
 }
