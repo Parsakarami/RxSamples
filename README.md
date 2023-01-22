@@ -36,3 +36,7 @@ The <b><i>Delay(TimeSpan dueTime)</i></b> operation is used to receive the value
 ### Where
 The <b><i>Where(Func<TSource, bool> predicate)</i></b> operation is used to filter out the values of an observable sequence.
 <img src="Marble Diagrams/MarbleDiagram - Where.jpg" width="60%">
+
+## Step Interval
+
+https://parsakarami.com/Blog/Main/Post/Receiving_buffered_items_with_wait_time_intervals_in_RxNET
